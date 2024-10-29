@@ -1,0 +1,89 @@
+body{
+  font-family: Arial;
+  background-color: #f4f4f4;
+  padding: 30px;
+  color: #333;
+  /* Configurações de background */
+  background-image: url('./img/bg.jpg'); /* Imagem de fundo */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita que a imagem se repita */
+  background-size: cover; /* Faz com que a imagem cubra todo o espaço do body */
+  min-height: 100vh; /* Garante que o body sempre tenha pelo menos a altura total da tela */
+  margin: 0; /* Remove a margem padrão do body */
+}
+
+.app{
+  max-width: 600px;
+  margin: 0 auto 300px;
+  background-color: white;
+  padding: 20px 30px;
+  border-radius: 10px;
+}
+
+h1{
+  text-align: center;
+}
+
+h2{
+  margin-bottom: 10px;
+}
+
+p{
+  margin: 10px 0;
+}
+
+input{
+  box-sizing: border-box;
+}
+
+button{
+  background-color: #333973;
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  margin-right: 10px;
+  cursor: pointer;
+  opacity: 0.8;
+  transform: .3s;
+}
+
+button:hover{
+  opacity: 1;
+}
+
+.todo-list{
+  margin-bottom: 20px;
+  padding: 20px;
+  border-bottom: 1px solid #555;
+}
+
+.todo{
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.267);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between; /* Horizontal */
+  align-items: center; /* Vertical */
+}
+
+.complete{
+  background-color: #5cb85c;
+}
+.remove{
+  background-color: #d9534f;
+}
+
+.todo-form{
+  padding-bottom: 1.5rem;
+}
+
+input, select{
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  width: 100%;
+}
