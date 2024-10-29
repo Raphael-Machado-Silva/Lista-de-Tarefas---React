@@ -43,12 +43,21 @@ function App() {
   const removeTodo = (id) => {
 
     const newTodos = [...todos]
-    const filteredTodos = newTodos.filter( //dando nulo ao id a ser excluido
+    const filteredTodos = newTodos.filter( //dando nulo ao id a ser excluido e retornando o todo que eu não quero remover
       todo => todo.id !== id ? todo : null
     )
     setTodos(filteredTodos)
   }
 
+
+  const completeTodo = (id) => {
+
+    const newTodos = [...todos] // copia para depois mandar por set
+
+    newTodos.map((todo) => todo.id === id ? todo.isCompleted = !todo.isCompleted : todo)
+
+    setTodos(newTodos)
+  }
 
   return (
     <div className='app'>
@@ -56,7 +65,7 @@ function App() {
         <div className="todo-list">
 
           {todos.map((todo) => (
-            <Todo key={todo.id} todo={todo} removeTodo={removeTodo} />
+            <Todo key={todo.id} todo={todo} removeTodo={removeTodo} completeTodo={completeTodo} />
           ))}
 
         </div>
